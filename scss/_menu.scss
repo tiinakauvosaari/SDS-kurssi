@@ -1,5 +1,4 @@
 //menu - button
-
 .menu-btn{
     position: absolute;
     z-index: 3;
@@ -12,13 +11,12 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include easeOut;
 
     }
 
     //rotate into X with menu lines
-
     &.close{
         transform: rotate(180deg);
 
@@ -62,11 +60,9 @@
         width: 50%;
         height: 100vh;
         overflow: hidden;
-
     }
 
     &-nav{
-
         margin: 0;
         padding: 0;
         background: darken($primary-color, 5);
@@ -120,7 +116,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color: #fff;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 
