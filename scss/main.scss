@@ -54,7 +54,7 @@ main{
     padding: 4rem;
   //  height: 100%;
 
-  min-height:calc(100vh - 60vh); //footer jää alimmaiseksi, kun sen tila lasketaan pois
+    min-height:calc(100vh - 60vh); //footer jää alimmaiseksi, kun sen tila lasketaan pois
 
     //vaikuttaa vain mainin sisällä oleviin kuvakkeisiin
     .icons{
@@ -133,6 +133,35 @@ main{
     }
   }
 }
+
+//contact Page
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div{
+        font-size: 1rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover{
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            span {
+                color: set-text-color($secondary-color);
+                }
+        }
+    }
+}
+
+
 
 //button styles
 .btn{
