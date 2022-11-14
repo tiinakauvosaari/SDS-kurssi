@@ -117,12 +117,18 @@ body {
       z-index: -1;
       background: rgba(68, 68, 68, 0.5); }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
     font-size: 3rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
@@ -177,6 +183,64 @@ main {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+
+.hobbies .parallax1,
+.hobbies .parallax2,
+.hobbies .parallax3,
+.hobbies .parallax4 {
+  background-attachment: fixed;
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.hobbies .parallax1 {
+  background-image: url(../img/slalom/yllas1.jpg);
+  width: 1150px;
+  height: 800px; }
+
+.hobbies .parallax2 {
+  background-image: url(../img/slalom/yllas4.jpg);
+  min-height: 400px; }
+
+.hobbies .parallax3 {
+  background-image: url(../img/slalom/yllas5.jpg);
+  min-height: 400px; }
+
+.hobbies .parallax4 {
+  background-image: url(../img/slalom/yllas2.jpg);
+  min-height: 400px; }
+
+.hobbies .section {
+  text-align: center;
+  padding: 50px 80px; }
+
+.hobbies .section-light {
+  background-color: #eece1a;
+  color: #666; }
+
+.hobbies .section-dark {
+  background-color: #444;
+  color: #fff; }
+
+.hobbies .ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: capitalize; }
+
+.hobbies .ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px; }
+
+.hobbies .ptext .border.trans {
+  background-color: transparent; }
 
 .projects {
   display: grid;
@@ -249,11 +313,13 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
+  ul.menu-nav,
+  div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
+    ul.menu-nav.show,
+    div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
@@ -277,3 +343,6 @@ main {
     margin-top: 10vh; }
   .projects {
     grid-template-columns: 1fr; } }
+
+.parallax {
+  background-attachment: scroll; }

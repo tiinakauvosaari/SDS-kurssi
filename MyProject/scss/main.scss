@@ -1,13 +1,13 @@
 @import 'config'; //kaikki muuttujat ovat omassa tiedostossaan
-@import 'menu';   //menulle ihan oma tiedosto
- 
+@import 'menu'; //menulle ihan oma tiedosto
+
 
 * {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
-body{
+body {
     @include background;
     background-color: $primary-color;
     color: set-text-color($primary-color);
@@ -18,26 +18,30 @@ body{
 }
 
 //otsikot
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     margin: 0;
     font-weight: 400; //fontin paksuus
-    &.lg-heading{
+
+    &.lg-heading {
         font-size: 3rem; //moninkokertainen fontin koko on
     }
-    &.sm-heading{
+
+    &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem; //tehdään tila tekstin taakse
         background: rgba(lighten($primary-color,
-        2), 0.5); 
+                    2), 0.5);
         //ensimmäinen parametri on alkuperäinen väri ja toinen se muutos
         //rgba näyttää läpi kuvan, joka lisätään myöhemmin
-    } 
+    }
 }
 
 //linkit
 a {
- color: #fff;
- text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 header {
@@ -47,22 +51,24 @@ header {
 }
 
 .text-secondary {
- color:$secondary-color;
+    color: $secondary-color;
 }
 
-main{
+main {
     padding: 4rem;
-  //  height: 100%;
+    //  height: 100%;
 
-    min-height:calc(100vh - 60vh); //footer jää alimmaiseksi, kun sen tila lasketaan pois
+    min-height: calc(100vh - 60vh); //footer jää alimmaiseksi, kun sen tila lasketaan pois
 
     //vaikuttaa vain mainin sisällä oleviin kuvakkeisiin
-    .icons{
+    .icons {
         margin-top: 1rem;
+
         //kuvake on a:n sisällä, muutettan a:ta
         a {
             padding: 0.4rem;
-            &:hover{
+
+            &:hover {
                 color: $secondary-color;
                 //muutokset, kuvakkeiden väri vaihtuu hitaammin
                 @include easeOut();
@@ -70,96 +76,179 @@ main{
         }
     }
 
-    &#home{
+    &#home {
         overflow: hidden;
-        h1{
+
+        h1 {
             margin-top: 20vh; //vh on oma unitti, 100 olisi kaikki
         }
     }
 }
 
-.about-info{
+.about-info {
 
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
+        'bioimage bio bio'
+        'job1 job2 job3';
 
     grid-template-columns: repeat(3, 1fr);
 
-    .bio-image{
+    .bio-image {
         grid-area: bioimage;
         margin: auto;
         border-radius: 10%;
         border: $secondary-color 3px solid;
     }
-    
-    .bio{
+
+    .bio {
         grid-area: bio;
         font-size: 1.5rem;
 
-     }
-    .job-1{
+    }
+
+    .job-1 {
         grid-area: job1;
     }
-    .job-2{
+
+    .job-2 {
         grid-area: job2;
     }
-    
-    .job-3{
+
+    .job-3 {
         grid-area: job3;
     }
-    .job{
+
+    .job {
         background: lighten($primary-color, 5); //vaalea pohja
         padding: 0.5rem; //reunalle tyhjää
         border-bottom: $secondary-color 5px solid; //keltainen viiva
     }
 }
 
-//work/projects
-.projects{
- display: grid;
- grid-gap: 1rem;
- grid-template-columns: repeat(3, 1fr);
- 
+//hobbies
+.hobbies {
 
-    img{
-        width: 50vh;
-        height: 50vh;  
-        border: 3px #ff5B33 solid;
-    
-    &:hover {
-        opacity: 0.5;
-        border-color: $secondary-color;
-        @include easeOut;
+    .parallax1,
+    .parallax2,
+    .parallax3,
+    .parallax4 {
+        background-attachment: fixed; //scrollaus 
+        position: relative;
+        opacity: 0.70;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-  }
+
+    .parallax1 {
+        background-image: url(../img/slalom/yllas1.jpg);
+        width: 1150px;
+        height: 800px;
+
+    }
+
+    .parallax2 {
+        background-image: url(../img/slalom/yllas4.jpg);
+        min-height: 400px;
+    }
+
+    .parallax3 {
+        background-image: url(../img/slalom/yllas5.jpg);
+        min-height: 400px;
+    }
+
+    .parallax4 {
+        background-image: url(../img/slalom/yllas2.jpg);
+        min-height: 400px;
+    }
+
+    .section {
+        text-align: center;
+        padding: 50px 80px;
+    }
+
+    .section-light {
+        background-color: $secondary-color;
+        color: #666;
+    }
+
+    .section-dark {
+        background-color: $primary-color;
+        color: #fff;
+    }
+
+    .ptext {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+        font-size: 27px;
+        letter-spacing: 8px;
+        text-transform: capitalize;
+    }
+
+    .ptext .border {
+        background-color: #111;
+        color: #fff;
+        padding: 20px;
+
+    }
+
+    .ptext .border.trans {
+        background-color: transparent;
+    }
+
+
+
+}
+
+//work/projects
+.projects {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    img {
+        width: 50vh;
+        height: 50vh;
+        border: 3px #ff5B33 solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
 }
 
 //contact Page
 
-.boxes{
+.boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
 
-    div{
+    div {
         font-size: 1rem;
         border: 3px #fff solid;
         padding: 1.5rem 2.5rem;
         margin-bottom: 3rem;
         @include easeOut;
 
-        &:hover{
+        &:hover {
             padding: 0.5rem 1.5rem;
             background: $secondary-color;
             color: set-text-color($secondary-color);
+
             span {
                 color: set-text-color($secondary-color);
-                }
+            }
         }
     }
 }
@@ -167,32 +256,34 @@ main{
 
 
 //button styles
-.btn{
-    display: block;   //inline-block menisi vierekkäit
+.btn {
+    display: block; //inline-block menisi vierekkäit
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
-    &:hover{
+
+    &:hover {
         background: $secondary-color;
         color: set-text-color($secondary-color);
     }
 }
+
 //btn - dark 
-.btn-dark{
+.btn-dark {
     @extend .btn; //laajennetaan btn - class
     background: darken($primary-color, 50);
     color: #fff;
 
 }
 
-.btn-light{
+.btn-light {
     @extend .btn;
     background: lighten($primary-color, 50);
     color: #333
 }
 
 
-#main-footer{
+#main-footer {
     text-align: center;
     padding: 1rem;
     background: darken($primary-color, 10);
@@ -200,4 +291,4 @@ main{
     height: 60px;
 }
 
-@import 'mobile';  
+@import 'mobile';
