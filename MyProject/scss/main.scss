@@ -133,35 +133,46 @@ main {
     .parallax1,
     .parallax2,
     .parallax3,
-    .parallax4 {
+    .parallax4,
+    .parallax5,
+    .parallax6 {
         background-attachment: fixed; //scrollaus 
         position: relative;
-        opacity: 0.70;
+        opacity: 0.80;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .parallax1 {
-        background-image: url(../img/slalom/yllas1.jpg);
-        width: 1150px;
-        height: 800px;
+        background-image: url(../img/slalom/lumilauta.png);
+        min-height: 800px;
 
     }
 
     .parallax2 {
-        background-image: url(../img/slalom/yllas4.jpg);
-        min-height: 400px;
+        background-image: url(../img/slalom/yllas_päällä.png);
+        min-height: 600px;
     }
 
     .parallax3 {
-        background-image: url(../img/slalom/yllas5.jpg);
-        min-height: 400px;
+        background-image: url(../img/slalom/maisema.png);
+        min-height: 600px;
     }
 
     .parallax4 {
-        background-image: url(../img/slalom/yllas2.jpg);
-        min-height: 400px;
+        background-image: url(../img/slalom/itavalta.png);
+        min-height: 600px;
+    }
+
+    .parallax5 {
+        background-image: url(../img/slalom/sveitsi.png);
+        min-height: 600px;
+    }
+
+    .parallax6 {
+        background-image: url(../img/slalom/yllas1.jpg);
+        min-height: 600px;
     }
 
     .section {
@@ -200,9 +211,6 @@ main {
     .ptext .border.trans {
         background-color: transparent;
     }
-
-
-
 }
 
 //work/projects
