@@ -185,73 +185,6 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
-.hobbies .parallax1,
-.hobbies .parallax2,
-.hobbies .parallax3,
-.hobbies .parallax4,
-.hobbies .parallax5,
-.hobbies .parallax6 {
-  background-attachment: fixed;
-  position: relative;
-  opacity: 0.80;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.hobbies .parallax1 {
-  background-image: url(../img/slalom/lumilauta.png);
-  min-height: 800px; }
-
-.hobbies .parallax2 {
-  background-image: url(../img/slalom/yllas_päällä.png);
-  min-height: 600px; }
-
-.hobbies .parallax3 {
-  background-image: url(../img/slalom/maisema.png);
-  min-height: 600px; }
-
-.hobbies .parallax4 {
-  background-image: url(../img/slalom/itavalta.png);
-  min-height: 600px; }
-
-.hobbies .parallax5 {
-  background-image: url(../img/slalom/sveitsi.png);
-  min-height: 600px; }
-
-.hobbies .parallax6 {
-  background-image: url(../img/slalom/yllas1.jpg);
-  min-height: 600px; }
-
-.hobbies .section {
-  text-align: center;
-  padding: 50px 80px; }
-
-.hobbies .section-light {
-  background-color: #eece1a;
-  color: #666; }
-
-.hobbies .section-dark {
-  background-color: #444;
-  color: #fff; }
-
-.hobbies .ptext {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-size: 27px;
-  letter-spacing: 8px;
-  text-transform: capitalize; }
-
-.hobbies .ptext .border {
-  background-color: #111;
-  color: #fff;
-  padding: 20px; }
-
-.hobbies .ptext .border.trans {
-  background-color: transparent; }
-
 .projects {
   display: grid;
   grid-gap: 1rem;
@@ -308,6 +241,86 @@ main {
   color: #fff;
   height: 60px; }
 
+.parallax1,
+.parallax2,
+.parallax3,
+.parallax4,
+.parallax5,
+.parallax6 {
+  background-attachment: fixed;
+  position: relative;
+  opacity: 0.80;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.parallax1 {
+  background-image: url(../img/slalom/lumilauta.png);
+  min-height: 800px; }
+
+.parallax2 {
+  background-image: url(../img/slalom/yllas_päällä.png);
+  min-height: 600px; }
+
+.parallax3 {
+  background-image: url(../img/slalom/maisema.png);
+  min-height: 600px; }
+
+.parallax4 {
+  background-image: url(../img/slalom/itavalta.png);
+  min-height: 600px; }
+
+.parallax5 {
+  background-image: url(../img/slalom/sveitsi.png);
+  min-height: 600px; }
+
+.parallax6 {
+  background-image: url(../img/slalom/yllas1.jpg);
+  min-height: 600px; }
+
+.section {
+  text-align: center;
+  padding: 50px 80px; }
+
+.section-light {
+  background-color: #eece1a;
+  color: #666; }
+
+.section-dark {
+  background-color: #444;
+  color: #fff; }
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: capitalize; }
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px; }
+
+.ptext .border.trans {
+  background-color: transparent; }
+
+.icon-bar {
+  position: absolute;
+  z-index: -10;
+  right: 100px;
+  top: 33px;
+  padding: 0%;
+  background-color: none; }
+  .icon-bar .active {
+    visibility: hidden; }
+
+.icon-bar a:hover {
+  background-color: #ff5B33; }
+
 @media screen and (min-width: 1170px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
@@ -315,7 +328,7 @@ main {
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr); }
-  .hobbies .ptext {
+  .ptext {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -323,7 +336,7 @@ main {
     font-size: 1rem;
     letter-spacing: 8px;
     text-transform: capitalize; }
-  .hobbies .ptext .border {
+  .ptext .border {
     background-color: none;
     color: none;
     padding: 0px; } }
@@ -359,7 +372,7 @@ main {
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
-  .hobbies .ptext {
+  .ptext {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -367,7 +380,7 @@ main {
     font-size: 15px;
     letter-spacing: 8px;
     text-transform: capitalize; }
-  .hobbies .ptext .border {
+  .ptext .border {
     background-color: none;
     color: none;
     padding: 0px; } }
@@ -377,7 +390,7 @@ main {
     margin-top: 10vh; }
   .projects {
     grid-template-columns: 1fr; }
-  .hobbies .ptext {
+  .ptext {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -385,10 +398,30 @@ main {
     font-size: 15px;
     letter-spacing: 8px;
     text-transform: capitalize; }
-  .hobbies .ptext .border {
+  .ptext .border {
     background-color: none;
     color: none;
     padding: 0px; } }
 
 .parallax {
   background-attachment: scroll; }
+
+/*
+.icon-bar a {
+    float: right;
+    width: 5%;
+    text-align: center;
+    padding: 0px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+    z-index: 3;
+    top: 0;
+}
+
+
+
+.active {
+    background-color: #000;
+}
+*/
