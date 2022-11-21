@@ -12,7 +12,8 @@ body {
     background-color: $primary-color;
     color: set-text-color($primary-color);
     height: 100%;
-    margin: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5;
 }
@@ -130,13 +131,13 @@ main {
 //work/projects
 .projects {
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
 
 
     img {
-        width: 50vh;
-        height: 50vh;
+        width: 45vh;
+        height: 45vh;
         border: 3px #ff5B33 solid;
 
         &:hover {
@@ -144,6 +145,10 @@ main {
             border-color: $secondary-color;
             @include easeOut;
         }
+    }
+
+    .item-left {
+        margin-right: 0%;
     }
 }
 
@@ -318,25 +323,4 @@ main {
 }
 
 
-
 @import 'mobile';
-
-/*
-.icon-bar a {
-    float: right;
-    width: 5%;
-    text-align: center;
-    padding: 0px 0;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 15px;
-    z-index: 3;
-    top: 0;
-}
-
-
-
-.active {
-    background-color: #000;
-}
-*/
